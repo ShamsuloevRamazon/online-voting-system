@@ -1,6 +1,8 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+from polls.models import Vote
+
 @api_view(['POST'])
 def vote(request):
     candidate_id = request.data.get('candidate_id')
